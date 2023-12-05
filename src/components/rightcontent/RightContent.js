@@ -2,7 +2,8 @@ import TopNav from './helpers/TopNav';
 import MainPage from './MainPage';
 import ExpandedSelection from './ExpandedSelection';
 import { Route, Routes } from 'react-router-dom';
-import Playlist from '../playlist/playlist';
+import Playlist from './playlist';
+import Track from './Track';
 
 const RightContent = ({ curatedList }) => {
   console.log("right")
@@ -17,6 +18,7 @@ const RightContent = ({ curatedList }) => {
               <Route path='selection/*' element={<ExpandedSelection />} />
               <Route path='foryou/:id' element={<Playlist systemPlaylist={true} />} />
               <Route path='playlist/:id' element={<Playlist/>} />
+              <Route path='track/:id' element={<Track/>}/>
             </Routes>
           </div>
         </div>
